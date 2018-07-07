@@ -1,0 +1,33 @@
+
+<p></p>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Article</div>
+    <div class="panel-body">
+
+<div class="form-group">
+  <label>Nom:</label>
+  <input type="text" [(ngModel)]='article.nom'>
+  <label>Prix:</label>
+  <input type="text" [(ngModel)]='article.prix'>
+  <button class="btn btn-primary" (click)='onAddArtcile()'>Ajouter</button>
+</div>
+
+<table>
+    <thead>
+      <th>Article</th>
+      <th>Prix</th>
+      <th>Date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arti of articles">
+        <td>{{arti.nom}}</td>
+        <td>{{arti.prix}}</td>
+        <td>{{arti.date | date: 'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+    </table>
+
+</div>
+</div>
+</div>
